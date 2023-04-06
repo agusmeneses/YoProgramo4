@@ -1,0 +1,12 @@
+<app-header></app-header>
+<h4>PelisUp!</h4>
+<H1>Series</H1>
+
+<div class="input-group rounded">
+    <img class="bg-image" width="35" height="35" src="assets/search-normal.svg">
+    <input type="text" class="form-control" placeholder="Buscar Series" name="filter" [(ngModel)]="toSearch" (ngModelChange)="search($event)">
+</div>
+
+<p>{{actual}}<span>({{cant}})</span></p>
+
+<app-card class="cards" [filter]="filter" [movieSeriesRow]="movieSeriesRow"></app-card>
