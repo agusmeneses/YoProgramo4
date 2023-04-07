@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { BaseLoginProvider } from 'angularx-social-login';
 import { ActivatedRoute, Router, NavigationStart } from '@angular/router';
 
 
