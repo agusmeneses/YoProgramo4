@@ -1,0 +1,52 @@
+{
+	
+	"Nombre": ["Agustin Edgardo Meneses"],
+	"Cargo": ["Full Stack Developer JR"],
+	"Desc": ["Hello! I'm a third-year Systems Engineering student. If you want to check out some of my projects, you can find them in the sections below. If you're interested in getting to know me better or have an interesting project or collaboration to discuss, don't hesitate to contact me."],
+	"Foto": ["https://w7.pngwing.com/pngs/560/655/png-transparent-utn-hd-logo.png"],
+	
+	
+	"Educacion": [{
+			"Inst": "Universidad Tecnológica Nacional",
+			"Carrera": "Information Systems Engineering",
+			"Fin": "In progress",
+			"Logo": "https://w7.pngwing.com/pngs/560/655/png-transparent-utn-hd-logo.png"
+		},
+		{
+			"Inst": "Universidad Siglo 21",
+			"Carrera": "Data Engineer Azure",
+			"Fin": 2022,
+			"Logo": "data:image/png;base64,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"
+		}
+	],
+	"Skills": [{
+			"Skill": "JavaScript",
+			"Porcentaje": 75
+		},
+		{
+			"Skill": "HTML/CSS",
+			"Porcentaje": 90
+		},
+		{
+			"Skill": "TypeScript",
+			"Porcentaje": 60
+		},
+		{
+			"Skill": "Azure",
+			"Porcentaje": 50
+		}
+	],
+	"Proyectos": [{
+			"Nombre": "PelisPlus!",
+			"Fecha": "november 2022",
+			"Desc": "Movie website i created during my Folcademy Bootcamp using Angular and Firebase. On this website, users can browse through a variety of movies and get information about their ratings, synopses, and other details. They can also create accounts and leave reviews for their favorite movies.",
+			"Link": "https://pelisup-dun.vercel.app/"
+		},
+		{
+			"Nombre": "Excercises Wiki",
+			"Fecha": "february 2023",
+			"Desc": "Exercises website where users can select the muscle they want to train and a video explaining how to perform the exercises will be displayed. Users can also store their progress. For the backend of the website, I used PHP, and for managing the database, I used MySQL, both on a local server.",
+			"Link": "https://drive.google.com/drive/folders/1PnTb4ON7YjYtqcVB6B0DBIOPcUnaOTKS"
+		}
+	]
+}

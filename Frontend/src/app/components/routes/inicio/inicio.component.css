@@ -1,3 +1,7 @@
+
+
+
+
 nav{
     backdrop-filter: blur(20px);
     display: flex;
@@ -104,45 +108,87 @@ body {
   
   .title {
     font-size: 7rem;
-    color: white;
-    text-shadow: 0 0 5px black;;
+    color: rgba(255, 255, 255, 0.849);
+    text-shadow: 0 0 5px rgb(0, 0, 0);;
   }
 
 .about {
     padding: 20px;
     background: rgb(228,47,84);
-    background: linear-gradient(180deg, rgba(228,47,84,1) 1%, rgba(115,133,228,1) 100%);
+    background: linear-gradient(180deg, rgba(228,47,84,1) 1%, rgba(42, 24, 107, 0.979) 100%);
     background-size: 100%;
 
     
 }
 
+
+
+
 .profile {
-    
-    display: flex;
-    align-items: left;
-    margin-left: 50px;
+position: relative;
+height: 240px;
+margin-top: 70px;
+display: flex;
+align-items: left;
+padding-left: 40px;
+border: 2px solid rgb(33, 23, 49);
+border-radius: 12px;
+}
+.profile h1{
+    color: rgb(33, 23, 49);
+    text-shadow: 0 0 1px rgb(0, 0, 0);
+}
+.profile h5{
+    color: #dc68ff;
+}
+.texto{
+    padding-right: 130px;
+}
+.nombre{
+position: relative;
+margin-top: 50px;
+color: rgb(255, 255, 255);
+text-shadow: 0 0 5px black;
 }
 
-.nombre{
-    margin-top: 50px;
+.contenido, .cargo-contenido, .texto-contenido, .skill-contenido{
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.editor {
+margin-right: 30px;
+}
+
+.foto{
+    margin-top: 25px;
+    width: 170px;
+    height: 165px;
+    border-radius: 50%;
+    margin-right: 30px;
+    z-index: 2;
+}
+
+
+
+
+.education {
+    position: relative;
+    padding: 20px;
+    padding-left: 35px;
+    margin-top: 10px;
+    border: 2px solid rgb(33, 23, 49);
+    border-radius: 12px;
     color: white;
     text-shadow: 0 0 5px black;
 }
-.foto{
-    width: 170px;
-    height: 170px;
-    border-radius: 50%;
-    margin-right: 20px;
-    z-index: 2;
+.editor-edu{
+    float: right;
+    margin-right: 10px;
 }
-.profile h1 {
-    font-size: 24px;
-    font-weight: bold;
-}
-.education {
-    padding: 20px;
-    margin-left: 35px;
+.education h1{
+    color: #dc68ff;
 }
 .education h2 {
     font-size: 18px;
@@ -155,20 +201,53 @@ body {
 .education li {
     margin-bottom: 10px;
 }
-.education img {
-    width: 30px;
-    height: 30px;
+.instilogo{
+    width: 40px;
+    height: 40px;
     margin-right: 10px;
     vertical-align: middle;
 }
+
+
 .skills{
     padding: 20px;
-    margin-left: 35px;
+    padding-left: 35px;
+    margin-top: 10px;
+    border: 2px solid rgb(33, 23, 49);
+    border-radius: 12px;
+    color: white;
+    text-shadow: 0 0 5px black;
+}
+.editor-skill{
+    margin-right: 10px;
+}
+.skills h1{
+    color: #dc68ff;
 }
 
 .proyectos{
+    position: relative;
     padding: 20px; 
-    margin-left: 35px;
+    padding-left: 35px;
+    margin-top: 10px;
+    border: 2px solid rgb(33, 23, 49);
+    border-radius: 12px;
+    color: white;
+    text-shadow: 0 0 5px black;
 }
-
+.proyectos h1{
+    color: #dc68ff;
+}
+.divisor{
+    padding-right: 130px;
+}
+.proye-contenido{
+    padding-right: 10px;
+}
+.link_pro{
+    color: aqua;
+}
+.editorproye{
+    float: right;
+}
   

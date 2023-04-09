@@ -10,13 +10,13 @@
 
         <nav class="navbar navbar-expand-lg ">
             <a class="navbar-brand" routerLinkActive="active" href="/inicio">
-              <img src="assets/logoarg.png" alt="Bootstrap" width="130" height="80">
+              <img src="assets/logoarg.png" alt="Bootstrap" width="150" height="90">
             </a>
             <ul class="navbar-nav ">
               <li>
                 <a class="nav-link" routerLink="/ingresar" routerLinkActive="active" href="https://www.facebook.com/mi_perfil">Facebook</a>
                 <a class="nav-link" routerLink="/ingresar" routerLinkActive="active" href="https://www.twitter.com/mi_perfil">Twitter</a>
-                <a class="nav-link" routerLink="/ingresar" routerLinkActive="active" href="/ingresar">Ingresar</a>
+                <a class="nav-link" routerLink="/ingresar" routerLinkActive="active" href="/ingresar">Login</a>
               </li>
             </ul>
         </nav>
@@ -28,62 +28,70 @@
             <img class="planeta" src="https://raw.githubusercontent.com/rgldev/sample-images/master/parallax_scene_2/1x/Planeta.png">
             <img class="montana" src="https://raw.githubusercontent.com/rgldev/sample-images/master/parallax_scene_2/1x/Montanas.png">
             <img src="https://raw.githubusercontent.com/rgldev/sample-images/master/parallax_scene_2/1x/Suelo.png" class="foreground">
-            <h1 class="title">Bienvenidos!</h1>
+            <h1 class="title">Welcome!</h1>
         </div>
 
         
         <section class="about">
 
+
             <div class="profile">
                 <img class="foto" src="assets/perfil.jpg" alt="Mi Foto de Perfil">
                 <div class="nombre">
-                    <h1>Agustin Edgardo Meneses</h1>
-                    <p>Full Stack Developer Jr</p>
-                    <p class="texto">Me encuentro cursando tercer año de Ingeniera en Sistemas. <br>
-                        Me destaco por mi capacidad para trabajar en equipo, comunicar de manera efectiva y adaptarme a diferentes contextos.</p>
+                  <div class="contenido">
+                    <h1>{{nombre}}</h1>
+                    <img class="editor" src="assets/edit.png" alt="edit" width="20px" height="20px">
+                  </div>
+                  <div class="cargo-contenido">
+                    <h5>{{cargo}}</h5>
+                    <img class="editor" src="assets/edit.png" alt="edit" width="20px" height="20px">
+                  </div>
+                  <div class="texto-contenido">
+                    <p class="texto">{{desc}}</p>
+                    <img class="editor" src="assets/edit.png" alt="edit" width="20px" height="20px">
+                  </div>
                 </div>
-            </div>
+              </div>
             
             <section class="education">
-                <h1>Educación</h1>
-                <div>
-                    <div>
-                        <img src="assets/logoinsti.png" alt="Logo del Instituto">
-                        Universidad Tecnológica Nacional, Ingeniería en Sistemas - en curso.
-                    </div>
-                    <br>
-                    <div>
-                        <img src="assets/logocerti.png" alt="Logo de la Certificación">
-                        Universidad Siglo 21, Data Engineer Azure - 2022
+                <h1>Education</h1>
+                <br>
+                <div *ngFor="let educacion of educationlist">
+                    <div class="educacion-contenido">
+                        <img class="instilogo" [src]="educacion.Logo" alt="Logo del Instituto">
+                        {{educacion.Inst}}, {{educacion.Carrera}} - {{educacion.Fin}}.
+                        <img class="editor-edu" src="assets/edit.png" alt="edit" width="20px" height="20px">
+                        <br> <br>
                     </div>
                 </div>
             </section>
 
+            
             <div class="skills">
-            <h1>Hard & Soft Skills</h1>
-            <p>JavaScript <progress id="js-progress" value="0" max="100"></progress> <span id="js-value"></span></p>
-            <p>HTML/CSS <progress id="html-css-progress" value="0" max="100"></progress> <span id="html-css-value"></span></p>
-            <p>TypeScript <progress id="ts-progress" value="0" max="100"></progress> <span id="ts-value"></span></p>
-            <p>Azure <progress id="azure-progress" value="0" max="100"></progress> <span id="azure-value"></span></p>
+                <h1 >Skills</h1>
+                <br>
+                <div class="skill-contenido" *ngFor="let skill of skillslist">
+                    <p>{{skill.Skill}}, Porcentaje: {{skill.Porcentaje}}%</p>
+                    <img class="editor-skill" src="assets/edit.png" alt="edit" width="20px" height="20px">
+                </div>
+                
             </div>
 
             <section class="proyectos">
-                <h1>Proyectos</h1>
-                <div>
-                <div>
-                    <h4>PelisPlus!</h4>
-                    <p>Fecha de realización: nov 2022</p>
-                    <p>Descripción del proyecto: Sitio web de películas que realizé para el Bootcamp de Folcademy usando Angular y Firebase</p>
-                    <a href="https://pelisup-dun.vercel.app/">Ver evidencia del proyecto</a>
-                </div>
+                <h1>Projects</h1>
                 <br>
-                <div>
-                    <h4>Excercises Wiki</h4>
-                    <p>Fecha de realización: feb 2023</p>
-                    <p>Descripción del proyecto: Sitio web de ejercicios donde realizé el Backend con PHP y la gestión de la base de datos con MySQL</p>
-                    <a href="https://drive.google.com/drive/folders/1PnTb4ON7YjYtqcVB6B0DBIOPcUnaOTKS">Ver evidencia del proyecto</a>
+                <div class="proye-contenido" *ngFor="let proyecto of proyectlist">
+                  <div class="divisor">
+                    <h4>{{proyecto.Nombre}}</h4>
+                    <p>Date: {{proyecto.Fecha}}</p>
+                    <p>{{proyecto.Desc}}</p>
+                    <a class="link_pro" href={{proyecto.Link}}>Link</a> 
+                  </div>
+                    <img class="editorproye" src="assets/edit.png" alt="edit" width="20px" height="20px">
+                   
+                    <br>  
+                    <br>
                 </div>
-            </div>
             </section>
         </section>
     </div>
