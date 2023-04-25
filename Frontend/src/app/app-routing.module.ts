@@ -17,7 +17,7 @@ const routes: Routes = [
     path:'dash', component: DashboardComponent, 
   },
   {
-    path: '',component: InicioComponent,
+    path: '',redirectTo: "ingresar",pathMatch:"full"
   },
   {
     path:"**", component: ErrorComponent,
