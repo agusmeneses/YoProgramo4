@@ -1,34 +1,22 @@
 
-
 <body>
     <div class="wrapper">
         
-        <div class="decorator">
-            <img src="assets/decorator.png" alt="decorator" width="100%" height="400">
-        </div>
+        
 
 
-        <nav class="navbar navbar-expand-lg ">
-            <a class="navbar-brand" routerLinkActive="active" href="/inicio">
-              <img src="assets/logoarg.png" alt="Bootstrap" width="150" height="90">
-            </a>
-            <ul class="navbar-nav ">
-              <li>
-                <a class="nav-link" routerLink="/ingresar" routerLinkActive="active" href="https://www.facebook.com/mi_perfil">Facebook</a>
-                <a class="nav-link" routerLink="/ingresar" routerLinkActive="active" href="https://www.twitter.com/mi_perfil">Twitter</a>
-                <a class="nav-link" routerLink="/ingresar" routerLinkActive="active" href="/ingresar">Login</a>
-              </li>
-            </ul>
-        </nav>
+        <app-header></app-header>
 
 
         <div class="contain">
-            <img src="https://raw.githubusercontent.com/rgldev/sample-images/master/parallax_scene_2/1x/Fondo.png" class="background">
             <img class="estrellas" src="https://raw.githubusercontent.com/rgldev/sample-images/master/parallax_scene_2/1x/Estrellas.png">
-            <img class="planeta" src="https://raw.githubusercontent.com/rgldev/sample-images/master/parallax_scene_2/1x/Planeta.png">
-            <img class="montana" src="https://raw.githubusercontent.com/rgldev/sample-images/master/parallax_scene_2/1x/Montanas.png">
-            <img src="https://raw.githubusercontent.com/rgldev/sample-images/master/parallax_scene_2/1x/Suelo.png" class="foreground">
-            <h1 class="title">Welcome!</h1>
+            <img class="planeta" src="assets/Planeta.png">
+            <img class="montana" src="assets/Montanas.png">
+            <img src="assets/suelo.png" class="foreground">
+            <img src="assets/logoarg.png" class="title">
+            <div *ngIf="!loaded" class="cssload-container">
+              <div class="cssload-speeding-wheel"></div>
+            </div>
         </div>
 
         

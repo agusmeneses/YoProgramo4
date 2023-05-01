@@ -1,5 +1,8 @@
+
+<div class="fondo">
+
 <app-header></app-header>
-<img class="sally" src="..\..\..\..\assets\Saly-11.png" alt="">
+<img class="saly" src="..\..\..\..\assets\Saly-1.png"  alt="">
 
 <div class="box">
 
@@ -7,31 +10,34 @@
 
     <form [formGroup]="Form" class="formulario">
 
+
         <div class="input-group rounded">
             <img class="bg-image" width="35" height="35" src="assets/sms.png" width="24px" height="24px">
-            <input type="text" class="form-control" placeholder="Usuario" formControlName="username">
+            <input type="text" class="form-control"  formControlName="username">
         </div>
 
         <div class="input-group rounded">
             <img class="bg-image" width="35" height="35" src="assets/llave.png" width="24px" height="24px">
-            <input type="text" class="form-control" placeholder="Contraseña" formControlName="password">
+            <input type="text" class="form-control"  formControlName="password">
         </div>
 
         <div *ngIf="error" class="Error">Login Error, please try again</div>
 
     </form>
 
-    <div class="login">
+    <button class="login" (click)="login()">
         <button class="boton1">Login</button>
-    </div>
-
+    </button>
 
     <div class="separador">
-        <img class="linea1" src="assets/linea.png" alt=""><h3>ó</h3><img class="linea1" src="assets/linea.png" alt="">
+        <img class="linea1" src="assets/linea.png" alt=""><h3></h3><img class="linea1" src="assets/linea.png" alt="">
     </div>
 
     <div class="logingoogle">
-        <button class="transparent"><img src="assets/Google.png" alt="" width="303px" height="69px"></button>
-    </div>
-    
-</div>
+        <button class="transparent" (click)="loginGoogle()" ><img src="assets/Google.png" alt="" width="303px" height="69px"></button>
+     </div>
+
+  
+
+
+

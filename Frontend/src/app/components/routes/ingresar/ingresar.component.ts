@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router, NavigationStart } from '@angular/router';
+import { BaseLoginProvider } from 'angularx-social-login';
+import {AuthService} from '../../../servicios/auth.service'
+
 
 
 @Component({
@@ -15,12 +18,88 @@ export class IngresarComponent implements OnInit {
     username: new FormControl(''),
     password: new FormControl(''),
   });
-  constructor() { }
+  constructor(public authService: AuthService,private router : Router) { }
 
   ngOnInit(): void {
     this.userlogged=false
     this.error=false
-    
+    this.authService.getUserLogged().subscribe(
+      response => {
+        console.log(response);
+        if (response){
+          console.log("Esta logueado")
+        }else{
+          console.log("No esta logueado")
+        }
+      },
+      error => {
+        console.log(error);
+      }
+    )
+  }
+
+  login(){
+    this.authService.login(
+      this.Form.get('username')?.value || '',
+      this.Form.get('password')?.value || '',
+    ).then(
+      response => {
+        console.log(response);
+        localStorage.setItem('Usuario', JSON.stringify(response))
+        if (response){
+          this.router.navigateByUrl('/inicio');
+        }else{
+          console.log("Error")
+          this.error=true
+        }
+      },
+      
+    )
+  }
+
+  loginGoogle(){
+    this.authService.loginWithGoogle().then(
+      response => {
+        console.log(response);
+        localStorage.setItem('Usuario', JSON.stringify(response))
+        if (response){
+          this.router.navigateByUrl('/dash');
+        }else{
+          console.log("Error")
+          this.error=true
+        }
+      }
+    )
+  }
+
+  register(): void{
+    this.authService.register(
+      this.Form.get('username')?.value || '',
+      this.Form.get('password')?.value || '',
+    ).then(
+      response => {
+        console.log('Registered | ',response);
+      }
+    )
+  }
+  showUserData(){
+    this.authService.getUserLogged().subscribe(
+      response => {
+        console.log(response);
+      },
+      error => {
+        console.log(error);
+      }
+    )
+  }
+
+  get userData(){
+    return 'User: '+ this.Form.get('username')?.value +' | Password: ' + this.Form.get('password')?.value
+  }
+
+  logOut(){
+    this.authService.logout()
+    console.log("Logged out")
   }
 
 

@@ -1,13 +1,20 @@
 export const environment = {
+  firebase: {
+    projectId: 'argentina-programa-14751',
+    appId: '1:418823948093:web:44e18c0b13ba5f088da754',
+    storageBucket: 'argentina-programa-14751.appspot.com',
+    apiKey: 'AIzaSyBkXGheq4zQAYVs5kwhkSyCDPG2rZStdRw',
+    authDomain: 'argentina-programa-14751.firebaseapp.com',
+    messagingSenderId: '418823948093',
+  },
   production: true,
   firebaseConfig : {
-    apiKey: "AIzaSyBCvJuQWu_UaGi-TBtyKi63DRncw7xRv-w",
-    authDomain: "angular-folcademy-1bd25.firebaseapp.com",
-    projectId: "angular-folcademy-1bd25",
-    storageBucket: "angular-folcademy-1bd25.appspot.com",
-    messagingSenderId: "1045537580741",
-    appId: "1:1045537580741:web:ac83b343372f8ded2bb2ac",
-    measurementId: "G-1JFVGB88V5"
+    apiKey: "AIzaSyBkXGheq4zQAYVs5kwhkSyCDPG2rZStdRw",
+    authDomain: "argentina-programa-14751.firebaseapp.com",
+    projectId: "argentina-programa-14751",
+    storageBucket: "argentina-programa-14751.appspot.com",
+    messagingSenderId: "418823948093",
+    appId: "1:418823948093:web:44e18c0b13ba5f088da754"
   }
 
 };

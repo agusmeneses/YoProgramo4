@@ -9,12 +9,14 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
  
 export class InicioComponent implements OnInit {
   miPorfolio: any;
+  miPorfolio2: any;
   educationlist: any;
   skillslist: any;
   proyectlist: any;
   nombre:any;
   cargo:any;
   desc:any;
+  loaded: boolean = false;
   
 
 
@@ -25,12 +27,24 @@ export class InicioComponent implements OnInit {
     this.datosPorfolio.obtenerDatos().subscribe (data =>{
       console.log(data)
       this.miPorfolio=data;
+
+      this.nombre=data.nombre
+      this.cargo=data.cargo
+      
+  
+    });
+
+    this.datosPorfolio.obtenerDatos2().subscribe (data =>{
+      console.log(data)
+      this.miPorfolio2=data;
+      
       this.educationlist=data.Educacion
       this.skillslist=data.Skills
       this.proyectlist=data.Proyectos
-      this.nombre=data.Nombre
-      this.cargo=data.Cargo
+      
+      
       this.desc=data.Desc
+      this.loaded=true
   
     });
   }

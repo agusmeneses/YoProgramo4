@@ -8,9 +8,15 @@ import { SharedModule } from './components/shared/shared.module';
 import { InicioComponent } from './components/routes/inicio/inicio.component';
 import { IngresarComponent } from './components/routes/ingresar/ingresar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
-import { DashboardComponent } from './components/routes/dashboard/dashboard.component';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { ErrorComponent } from './components/routes/error/error.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AuthService } from './servicios/auth.service';
+import { PorfolioService } from './servicios/porfolio.service';
+import { InterceptorService } from './servicios/interceptor.service';
 
 
 @NgModule({
@@ -19,7 +25,6 @@ import { ErrorComponent } from './components/routes/error/error.component';
     InicioComponent,
     IngresarComponent,
     ErrorComponent,
-    DashboardComponent, 
   ],
   imports: [
     BrowserModule,
@@ -30,9 +35,14 @@ import { ErrorComponent } from './components/routes/error/error.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    provideAuth(() => getAuth()),
 
   ],
-  providers: [IngresarComponent],
+  providers: [IngresarComponent,PorfolioService,
+    {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi:true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
