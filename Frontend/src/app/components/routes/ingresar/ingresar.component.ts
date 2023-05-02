@@ -63,7 +63,7 @@ export class IngresarComponent implements OnInit {
         console.log(response);
         localStorage.setItem('Usuario', JSON.stringify(response))
         if (response){
-          this.router.navigateByUrl('/dash');
+          this.router.navigateByUrl('/inicio');
         }else{
           console.log("Error")
           this.error=true

@@ -1,31 +1,25 @@
-
-.saly{
-    margin-top: 140px;
-    margin-left: 60px;
-    position: absolute;
-    left: 0%;
-    right: 0%;
-    top: -0.71%;
-    bottom: -3.57%;
-    height: 560px;
-    width: 570px;
-
-    
+/* Estilos comunes a todas las pantallas */
+.saly {
+    margin-top: 10%;
+    margin-left: 8%;
+    width: 36%;
+    height: 36%;
 }
 
-.box{
-    margin-top: 116px;
+.box {
     position: absolute;
+    margin-top: 116px;
     left: 50%;
     right: 0%;
     top: -0.71%;
     bottom: -3.57%;
 }
-.formulario{
+
+.formulario {
     margin-top: 40px;
 }
 
-.titulo{
+.titulo {
     width: 486px;
     height: 80px;
     font-family: 'Poppins';
@@ -38,7 +32,7 @@
     margin-top: 44px;
 }
 
-.input-group{
+.input-group {
     box-sizing: border-box;
     margin-top: 16px;
     display: flex;
@@ -56,7 +50,7 @@
     flex-grow: 1;
 }
 
-.form-control{
+.form-control {
     background: rgba(228, 221, 221, 0);
     border: none;
     color: #1d1010;
@@ -74,21 +68,20 @@
     color: #4fc3d3;
 }
 
-.login{
+
+.login {
+    width: 100%;
+    height: 50px;
+    max-width: 486px;
+    margin-top: 4%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 16px 32px;
-    gap: 8px;
-    margin-top: 40px;
-
-    width: 486px;
-    height: 56px;
-
-    background: #7B6EF6;
-
-    border: 2px solid #7B6EF6;
+    background: none;
+    border: none;
+    background: #bb3333;
+    border: 2px solid #bb3333;
     border-radius: 12px;
     flex: none;
     order: 0;
@@ -96,19 +89,14 @@
 }
 
 .boton1{
-    background: #7B6EF6;
-    width: 67px;
-    height: 24px;
+    background:none;
+    border: none;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     color: #FFFFFF;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    border: none;
 }
 
 .separador{
@@ -134,10 +122,10 @@
 
 
 h3{
-    margin-top: 25px;
+    margin-top: 24px;
     margin-left: 0px;
     padding-left: 0px;
-    width: 20px;
+    width: 30px;
     height: 40px;
     left: 960px;
     top: 570px;
@@ -151,7 +139,8 @@ h3{
 }
 
 .logingoogle{
-    margin-left: 90px;
+    margin-top: 2%;
+    margin-left: 80px;
 }
 
 .transparent{
@@ -176,4 +165,160 @@ h3{
     flex-direction: row;
     justify-content: space-between;
     position: absolute;
+}
+/* Responsivo */
+@media (max-width: 767px) {
+    .saly {
+        margin: 10% auto;
+        margin-top: 30%;
+        position: relative;
+        height: auto;
+        width: 90%;
+        max-width: 570px;
+    }
+
+    .box {
+        margin-top: 80px;
+        position: relative;
+        left: 0%;
+        right: 0%;
+        top: 0%;
+        bottom: 0%;
+    }
+    
+    .formulario {
+        margin-top: 40px;
+    }
+    
+    .titulo {
+        width: 90%;
+        font-size: 40px;
+        line-height: 48px;
+        margin-top: 30px;
+        text-align: center;
+    }
+    
+    .input-group {
+        width: 90%;
+        max-width: 486px;
+        margin: 16px auto;
+        height: auto;
+        flex-wrap: wrap;
+        padding: 16px 8px;
+    }
+    
+    .login {
+        width: 90%;
+        max-width: 486px;
+        margin: 40px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: none;
+        border: none;
+    }
+    
+    .boton1 {
+        width: 70%;
+        height: 40px;
+        font-size: 16px;
+    }
+    
+    .logingoogle {
+        margin: 0px auto;
+        width: 80%;
+        max-width: 300px;
+        margin-top: 16px;
+    }
+    
+    /* Añadido para mejorar la experiencia de usuario en dispositivos pequeños */
+    .navbar-brand {
+        margin-right: 0;
+    }
+    
+    .navbar-toggler {
+        margin-top: 20px;
+    }
+    
+    .navbar-collapse {
+        background-color: #fff;
+        margin-top: 20px;
+    }
+    
+    .nav-link {
+        color: #000;
+        font-size: 18px;
+        text-align: center;
+    }
+    
+    .dropdown-menu {
+        background-color: #fff;
+        margin: 0;
+    }
+    
+    .dropdown-item {
+        color: #000;
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    .navbar-nav .nav-item {
+        margin: 0 auto;
+    }
+    
+    .navbar-nav {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .redes-sociales {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    
+    .redes-sociales .col {
+        margin-bottom: 20px;
+    }
+    
+    .redes-sociales .col img {
+        max-width: 100px;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .footer {
+        margin-top: 20px;
+    }
+    
+    .footer .col {
+        margin-bottom: 20px;
+    }
+    
+    .footer h3 {
+        font-size: 24px;
+    }
+    
+    .footer p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    
+    .footer ul {
+        margin-top: 20px;
+        padding-left: 0;
+        list-style: none;
+    }
+    
+    .footer li {
+        margin-bottom: 10px;
+    }
+    
+    .footer a {
+        color: #000;
+    }
+    
+    .footer a:hover {
+        color: #bbb;
+    }
 }

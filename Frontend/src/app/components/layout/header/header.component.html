@@ -1,15 +1,15 @@
 <div class="todo">
 <nav class="navbar navbar-expand-lg ">
-    <a class="navbar-brand" routerLink="" routerLinkActive="active" href="#">
+    <a class="navbar-brand" routerLink="" routerLinkActive="active" href="#/inicio">
       <img src="assets/logoarg.png" alt="Bootstrap" width="130" height="80">
       <a></a>
     </a>
     <ul class="navbar-nav ">
       <li>
-        <a *ngIf="logeado" class="nav-link" routerLink="https://github.com/agusmeneses" routerLinkActive="active">GitHub</a>
-        <a *ngIf="logeado" class="nav-link" routerLink="https://www.linkedin.com/in/agustin-edgardo-meneses-63120523b/" routerLinkActive="active">Linkedin</a>
-        <a *ngIf="!logeado" class="nav-link" href="/ingresar" routerLinkActive="active">Ingresar</a>
-        <a *ngIf="logeado" class="nav-link" (click)="logOut()" routerLinkActive="active" >Salir</a>
+        <a *ngIf="logeado" class="nav-link" routerLink="https://github.com/agusmeneses" href="https://github.com/agusmeneses" routerLinkActive="active">GitHub</a>
+        <a *ngIf="logeado" class="nav-link" href="https://www.linkedin.com/in/agustin-edgardo-meneses-63120523b/" routerLinkActive="active">Linkedin</a>
+        <a *ngIf="!logeado" class="nav-link" href="#" routerLinkActive="active">Ingresar</a>
+        <a *ngIf="logeado" class="nav-link" (click)="logOut()" href="#" routerLinkActive="active" >Salir</a>
       </li>
     </ul>
 </nav>
