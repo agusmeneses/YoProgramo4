@@ -17,6 +17,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AuthService } from './servicios/auth.service';
 import { PorfolioService } from './servicios/porfolio.service';
 import { InterceptorService } from './servicios/interceptor.service';
+import { LocationStrategy, HashLocationStrategy} from '@angular/common';
 
 
 @NgModule({
@@ -41,7 +42,7 @@ import { InterceptorService } from './servicios/interceptor.service';
 
   ],
   providers: [IngresarComponent,PorfolioService,
-    {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi:true}
+    {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi:true},{ provide: LocationStrategy, useClass: HashLocationStrategy }
   ],
   bootstrap: [AppComponent]
 })

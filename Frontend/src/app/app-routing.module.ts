@@ -8,16 +8,16 @@ import { GuardGuard } from './servicios/guard.guard';
 
 const routes: Routes = [
   {
-    path: 'https://argentina-programa-14751.web.app/inicio',component: InicioComponent, canActivate:[GuardGuard]
+    path: 'inicio',component: InicioComponent, canActivate:[GuardGuard]
   },
   {
-    path: 'https://argentina-programa-14751.web.app/ingresar',component: IngresarComponent,
+    path: 'ingresar',component: IngresarComponent,
   },
   {
-    path: 'https://argentina-programa-14751.web.app/',component: IngresarComponent,
+    path: '',component: IngresarComponent,
   },
   {
-    path:"https://argentina-programa-14751.web.app/**", component: ErrorComponent,
+    path:"**", component: ErrorComponent,
   }
 ]
 
