@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PorfolioService {
-  url: string="http://localhost:8080/buscar/"
+  url: string="https://argprog-backend-uaep.onrender.com/buscar/"
 
   constructor(private http:HttpClient) { }
 
